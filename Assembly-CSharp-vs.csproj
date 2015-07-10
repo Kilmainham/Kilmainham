@@ -72,7 +72,11 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\VRDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\iOSVRDevice.cs" />
+     <Compile Include="Assets\FlyingPathScript.cs" />
+     <Compile Include="Assets\FollowFlyingPath.cs" />
+     <Compile Include="Assets\PathPointScript.cs" />
      <Compile Include="Assets\TBE_3Dception\Utilities\TBE_SRChange.cs" />
+     <Compile Include="Assets\transform.cs" />
      <None Include="Assets\Cardboard\Legacy\Resources\SkyboxMesh.shader" />
      <None Include="Assets\Cardboard\Legacy\Resources\GUIScreen.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
