@@ -29,7 +29,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: Butterfly.Root
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -114,7 +114,7 @@ ModelImporter:
     armStretch: .0500000007
     legStretch: .0500000007
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Butterfly.Root
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   additionalBone: 0
