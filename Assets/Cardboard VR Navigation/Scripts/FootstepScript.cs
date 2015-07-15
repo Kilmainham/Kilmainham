@@ -16,6 +16,8 @@ public class FootstepScript : MonoBehaviour {
 	private AudioSource myAudio;
 	private int randomClip;
 	private int lastClip;
+	public AudioLowPassFilter footFilter;
+	private int filterCut;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +40,9 @@ public class FootstepScript : MonoBehaviour {
 		myAudio.reverbZoneMix = 1f; //use reverb zones
 		myAudio.panStereo = -legPan; //left foot first (source panned 50% left)
 		isLeftLeg = true;
+		footFilter = GetComponent<AudioLowPassFilter>();
+		filterCut = 5000;
+		footFilter.cutoffFrequency = filterCut;
 	}
 	
 	// Update is called once per frame
@@ -62,6 +67,11 @@ public class FootstepScript : MonoBehaviour {
 		// don't let clips overlap
 		if(!myAudio.isPlaying)
 		{
+
+			// slightly vary filter cutoff for each step
+			filterCut = Random.Range(4000, 6000);
+			footFilter.cutoffFrequency = filterCut;
+
 			// slightly vary pitch and volume of each sample
 			myAudio.pitch = Random.Range(0.9f, 1.1f);
 			myAudio.volume = Random.Range(0.6f, 1f);
