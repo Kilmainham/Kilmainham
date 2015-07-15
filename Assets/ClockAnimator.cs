@@ -17,7 +17,7 @@ public class ClockAnimator : MonoBehaviour {
 		//store temporary variable time in the DateTime Now property
 		time = DateTime.Now;
 	}
-
+	// method Update refreshes every frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)){
 			ReverseOneHour();
