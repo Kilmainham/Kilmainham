@@ -1,0 +1,436 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    Assets/Cardboard VR Navigation.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scenes.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scenes/Demo.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scenes/Demo.unity
+#	deleted:    Assets/Cardboard VR Navigation/Scenes/Demo.unity.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scenes/Demo/NavMesh.asset
+#	deleted:    Assets/Cardboard VR Navigation/Scenes/Demo/NavMesh.asset.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scripts.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scripts/FollowPlayer.cs
+#	deleted:    Assets/Cardboard VR Navigation/Scripts/FollowPlayer.cs.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scripts/FootstepScript.cs.meta
+#	deleted:    Assets/Cardboard VR Navigation/Scripts/PlayerMotor.cs
+#	deleted:    Assets/Cardboard VR Navigation/Scripts/PlayerMotor.cs.meta
+#	deleted:    Assets/Cardboard.meta
+#	deleted:    Assets/Cardboard/DemoScene.meta
+#	deleted:    Assets/Cardboard/DemoScene/DemoScene.unity
+#	deleted:    Assets/Cardboard/DemoScene/DemoScene.unity.meta
+#	deleted:    Assets/Cardboard/DemoScene/GazePointer.mat
+#	deleted:    Assets/Cardboard/DemoScene/GazePointer.mat.meta
+#	deleted:    Assets/Cardboard/DemoScene/GroundPlane.mat
+#	deleted:    Assets/Cardboard/DemoScene/GroundPlane.mat.meta
+#	deleted:    Assets/Cardboard/DemoScene/GroundPlane.png
+#	deleted:    Assets/Cardboard/DemoScene/GroundPlane.png.meta
+#	deleted:    Assets/Cardboard/DemoScene/Teleport.cs
+#	deleted:    Assets/Cardboard/DemoScene/Teleport.cs.meta
+#	deleted:    Assets/Cardboard/Editor.meta
+#	deleted:    Assets/Cardboard/Editor/CardboardEditor.cs
+#	deleted:    Assets/Cardboard/Editor/CardboardEditor.cs.meta
+#	deleted:    Assets/Cardboard/Editor/StereoControllerEditor.cs
+#	deleted:    Assets/Cardboard/Editor/StereoControllerEditor.cs.meta
+#	deleted:    Assets/Cardboard/LICENSE
+#	deleted:    Assets/Cardboard/LICENSE.meta
+#	deleted:    Assets/Cardboard/Legacy.meta
+#	deleted:    Assets/Cardboard/Legacy/DemoScene.meta
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/CardboardPointer.png
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/CardboardPointer.png.meta
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/DemoScene.unity
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/DemoScene.unity.meta
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/TeleportLegacyUI.cs
+#	deleted:    Assets/Cardboard/Legacy/DemoScene/TeleportLegacyUI.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Prefabs.meta
+#	deleted:    Assets/Cardboard/Legacy/Prefabs/CardboardGUI.prefab
+#	deleted:    Assets/Cardboard/Legacy/Prefabs/CardboardGUI.prefab.meta
+#	deleted:    Assets/Cardboard/Legacy/Prefabs/CardboardMain.prefab
+#	deleted:    Assets/Cardboard/Legacy/Prefabs/CardboardMain.prefab.meta
+#	deleted:    Assets/Cardboard/Legacy/Resources.meta
+#	deleted:    Assets/Cardboard/Legacy/Resources/GUIScreen.shader
+#	deleted:    Assets/Cardboard/Legacy/Resources/GUIScreen.shader.meta
+#	deleted:    Assets/Cardboard/Legacy/Resources/SkyboxMesh.shader
+#	deleted:    Assets/Cardboard/Legacy/Resources/SkyboxMesh.shader.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardAndroidDevice.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardAndroidDevice.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUI.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUI.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/SkyboxMesh.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/SkyboxMesh.cs.meta
+#	deleted:    Assets/Cardboard/Legacy/Scripts/StereoLensFlare.cs
+#	deleted:    Assets/Cardboard/Legacy/Scripts/StereoLensFlare.cs.meta
+#	deleted:    Assets/Cardboard/Prefabs.meta
+#	deleted:    Assets/Cardboard/Prefabs/CardboardAdapter.prefab
+#	deleted:    Assets/Cardboard/Prefabs/CardboardAdapter.prefab.meta
+#	deleted:    Assets/Cardboard/Prefabs/CardboardHead.prefab
+#	deleted:    Assets/Cardboard/Prefabs/CardboardHead.prefab.meta
+#	deleted:    Assets/Cardboard/Prefabs/CardboardMain.prefab
+#	deleted:    Assets/Cardboard/Prefabs/CardboardMain.prefab.meta
+#	deleted:    Assets/Cardboard/README
+#	deleted:    Assets/Cardboard/README.meta
+#	deleted:    Assets/Cardboard/Resources.meta
+#	deleted:    Assets/Cardboard/Resources/RadialUndistortionEffect.shader
+#	deleted:    Assets/Cardboard/Resources/RadialUndistortionEffect.shader.meta
+#	deleted:    Assets/Cardboard/Resources/SolidColor.shader
+#	deleted:    Assets/Cardboard/Resources/SolidColor.shader.meta
+#	deleted:    Assets/Cardboard/Scripts.meta
+#	deleted:    Assets/Cardboard/Scripts/Cardboard.cs
+#	deleted:    Assets/Cardboard/Scripts/Cardboard.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/CardboardEye.cs
+#	deleted:    Assets/Cardboard/Scripts/CardboardEye.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/CardboardHead.cs
+#	deleted:    Assets/Cardboard/Scripts/CardboardHead.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/CardboardProfile.cs
+#	deleted:    Assets/Cardboard/Scripts/CardboardProfile.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/CardboardUILayer.cs
+#	deleted:    Assets/Cardboard/Scripts/CardboardUILayer.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/GazeInputModule.cs
+#	deleted:    Assets/Cardboard/Scripts/GazeInputModule.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/Pose3D.cs
+#	deleted:    Assets/Cardboard/Scripts/Pose3D.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/RadialUndistortionEffect.cs
+#	deleted:    Assets/Cardboard/Scripts/RadialUndistortionEffect.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/StereoController.cs
+#	deleted:    Assets/Cardboard/Scripts/StereoController.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/AndroidBaseVRDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/AndroidBaseVRDevice.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/AndroidVRDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/AndroidVRDevice.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/BaseVRDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/BaseVRDevice.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/UnityEditorDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/UnityEditorDevice.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/VRDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/VRDevice.cs.meta
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/iOSVRDevice.cs
+#	deleted:    Assets/Cardboard/Scripts/VRDevices/iOSVRDevice.cs.meta
+#	deleted:    Assets/FlyingPathScript.cs
+#	deleted:    Assets/FlyingPathScript.cs.meta
+#	deleted:    Assets/FollowFlyingPath.cs
+#	deleted:    Assets/FollowFlyingPath.cs.meta
+#	deleted:    Assets/Materials.meta
+#	deleted:    Assets/Materials/Centrepice_granite.mat
+#	deleted:    Assets/Materials/Centrepice_granite.mat.meta
+#	deleted:    Assets/Materials/Ground_Cobbles.mat
+#	deleted:    Assets/Materials/Ground_Cobbles.mat.meta
+#	deleted:    Assets/Materials/Ground_Pavement.mat
+#	deleted:    Assets/Materials/Ground_Pavement.mat.meta
+#	deleted:    Assets/Materials/No Name.mat
+#	deleted:    Assets/Materials/No Name.mat.meta
+#	deleted:    Assets/Materials/Old_And_Rusty_Metal_Texture.mat
+#	deleted:    Assets/Materials/Old_And_Rusty_Metal_Texture.mat.meta
+#	deleted:    Assets/Materials/Railing_Black.mat
+#	deleted:    Assets/Materials/Railing_Black.mat.meta
+#	deleted:    Assets/Materials/Railing_Concrete.mat
+#	deleted:    Assets/Materials/Railing_Concrete.mat.meta
+#	deleted:    Assets/Materials/Roof_Tiles.mat
+#	deleted:    Assets/Materials/Roof_Tiles.mat.meta
+#	deleted:    Assets/Materials/Rusty_Metal_Black.mat
+#	deleted:    Assets/Materials/Rusty_Metal_Black.mat.meta
+#	deleted:    Assets/Materials/Stone_Wall.mat
+#	deleted:    Assets/Materials/Stone_Wall.mat.meta
+#	deleted:    Assets/Materials/butterflyRef.mat.meta
+#	deleted:    Assets/Materials/lambert1.mat
+#	deleted:    Assets/Materials/lambert1.mat.meta
+#	deleted:    Assets/Materials/pipes_rusted.mat
+#	deleted:    Assets/Materials/pipes_rusted.mat.meta
+#	deleted:    Assets/Models.meta
+#	deleted:    Assets/Models/Materials.meta
+#	deleted:    Assets/Models/Materials/window.mat
+#	deleted:    Assets/Models/Materials/window.mat.meta
+#	deleted:    Assets/Models/ext_door.FBX
+#	deleted:    Assets/Models/ext_door.FBX.meta
+#	deleted:    Assets/Models/ext_window.FBX
+#	deleted:    Assets/Models/ext_window.FBX.meta
+#	deleted:    Assets/Models/ext_window.fbm.meta
+#	deleted:    Assets/Models/ext_window.fbm/window.jpg
+#	deleted:    Assets/Models/ext_window.fbm/window.jpg.meta
+#	deleted:    Assets/Models/scene1_test2_unity (1).FBX
+#	deleted:    Assets/Models/scene1_test2_unity (1).FBX.meta
+#	deleted:    Assets/PathPointScript.cs
+#	deleted:    Assets/PathPointScript.cs.meta
+#	deleted:    Assets/Plugins.meta
+#	deleted:    Assets/Plugins/Android.meta
+#	deleted:    Assets/Plugins/Android/AndroidManifest.xml
+#	deleted:    Assets/Plugins/Android/AndroidManifest.xml.meta
+#	deleted:    Assets/Plugins/Android/libs.meta
+#	deleted:    Assets/Plugins/Android/libs/armeabi-v7a.meta
+#	deleted:    Assets/Plugins/Android/libs/armeabi-v7a/libRenderingPlugin.so
+#	deleted:    Assets/Plugins/Android/libs/armeabi-v7a/libRenderingPlugin.so.meta
+#	deleted:    Assets/Plugins/Android/libs/armeabi-v7a/libvrunity.so
+#	deleted:    Assets/Plugins/Android/libs/armeabi-v7a/libvrunity.so.meta
+#	deleted:    Assets/Plugins/Android/libs/x86.meta
+#	deleted:    Assets/Plugins/Android/libs/x86/libRenderingPlugin.so
+#	deleted:    Assets/Plugins/Android/libs/x86/libRenderingPlugin.so.meta
+#	deleted:    Assets/Plugins/Android/libs/x86/libvrunity.so
+#	deleted:    Assets/Plugins/Android/libs/x86/libvrunity.so.meta
+#	deleted:    Assets/Plugins/Android/unityvractivity.jar
+#	deleted:    Assets/Plugins/Android/unityvractivity.jar.meta
+#	deleted:    Assets/Plugins/Legacy.meta
+#	deleted:    Assets/Plugins/Legacy/Android.meta
+#	deleted:    Assets/Plugins/Legacy/Android/AndroidManifest.xml
+#	deleted:    Assets/Plugins/Legacy/Android/AndroidManifest.xml.meta
+#	deleted:    Assets/Plugins/Legacy/Android/libprotobuf-java-2.6-nano.jar
+#	deleted:    Assets/Plugins/Legacy/Android/libprotobuf-java-2.6-nano.jar.meta
+#	deleted:    Assets/Plugins/Legacy/Android/unitycardboardactivity.jar
+#	deleted:    Assets/Plugins/Legacy/Android/unitycardboardactivity.jar.meta
+#	deleted:    Assets/Plugins/Legacy/Android/vrtoolkit.jar
+#	deleted:    Assets/Plugins/Legacy/Android/vrtoolkit.jar.meta
+#	deleted:    Assets/Plugins/iOS.meta
+#	deleted:    Assets/Plugins/iOS/CardboardAppController.h
+#	deleted:    Assets/Plugins/iOS/CardboardAppController.h.meta
+#	deleted:    Assets/Plugins/iOS/CardboardAppController.mm
+#	deleted:    Assets/Plugins/iOS/CardboardAppController.mm.meta
+#	deleted:    Assets/Plugins/iOS/CardboardView.h
+#	deleted:    Assets/Plugins/iOS/CardboardView.h.meta
+#	deleted:    Assets/Plugins/iOS/CardboardView.mm
+#	deleted:    Assets/Plugins/iOS/CardboardView.mm.meta
+#	deleted:    Assets/Plugins/iOS/libGoogleKitCore.a
+#	deleted:    Assets/Plugins/iOS/libGoogleKitCore.a.meta
+#	deleted:    Assets/Plugins/iOS/libGoogleKitHUD.a
+#	deleted:    Assets/Plugins/iOS/libGoogleKitHUD.a.meta
+#	deleted:    Assets/Plugins/iOS/libNimbusAttributedLabel.a
+#	deleted:    Assets/Plugins/iOS/libNimbusAttributedLabel.a.meta
+#	deleted:    Assets/Plugins/iOS/libNimbusCore.a
+#	deleted:    Assets/Plugins/iOS/libNimbusCore.a.meta
+#	deleted:    Assets/Plugins/iOS/libNimbusModels.a
+#	deleted:    Assets/Plugins/iOS/libNimbusModels.a.meta
+#	deleted:    Assets/Plugins/iOS/libProtocolBuffers.a
+#	deleted:    Assets/Plugins/iOS/libProtocolBuffers.a.meta
+#	deleted:    Assets/Plugins/iOS/libQuantumCore.a
+#	deleted:    Assets/Plugins/iOS/libQuantumCore.a.meta
+#	deleted:    Assets/Plugins/iOS/libapi.a
+#	deleted:    Assets/Plugins/iOS/libapi.a.meta
+#	deleted:    Assets/Plugins/iOS/libbase.a
+#	deleted:    Assets/Plugins/iOS/libbase.a.meta
+#	deleted:    Assets/Plugins/iOS/libcardboard.a
+#	deleted:    Assets/Plugins/iOS/libcardboard.a.meta
+#	deleted:    Assets/Plugins/iOS/libcardboard_protos.a
+#	deleted:    Assets/Plugins/iOS/libcardboard_protos.a.meta
+#	deleted:    Assets/Plugins/iOS/libcomposite.a
+#	deleted:    Assets/Plugins/iOS/libcomposite.a.meta
+#	deleted:    Assets/Plugins/iOS/libdatatypes.a
+#	deleted:    Assets/Plugins/iOS/libdatatypes.a.meta
+#	deleted:    Assets/Plugins/iOS/libdevice.a
+#	deleted:    Assets/Plugins/iOS/libdevice.a.meta
+#	deleted:    Assets/Plugins/iOS/libdevice_internal.a
+#	deleted:    Assets/Plugins/iOS/libdevice_internal.a.meta
+#	deleted:    Assets/Plugins/iOS/libevent.a
+#	deleted:    Assets/Plugins/iOS/libevent.a.meta
+#	deleted:    Assets/Plugins/iOS/libevent_internal.a
+#	deleted:    Assets/Plugins/iOS/libevent_internal.a.meta
+#	deleted:    Assets/Plugins/iOS/libgflags.a
+#	deleted:    Assets/Plugins/iOS/libgflags.a.meta
+#	deleted:    Assets/Plugins/iOS/libionanalytics.a
+#	deleted:    Assets/Plugins/iOS/libionanalytics.a.meta
+#	deleted:    Assets/Plugins/iOS/libionbase.a
+#	deleted:    Assets/Plugins/iOS/libionbase.a.meta
+#	deleted:    Assets/Plugins/iOS/libionfreetype2.a
+#	deleted:    Assets/Plugins/iOS/libionfreetype2.a.meta
+#	deleted:    Assets/Plugins/iOS/libiongfx.a
+#	deleted:    Assets/Plugins/iOS/libiongfx.a.meta
+#	deleted:    Assets/Plugins/iOS/libiongfxutils.a
+#	deleted:    Assets/Plugins/iOS/libiongfxutils.a.meta
+#	deleted:    Assets/Plugins/iOS/libionimage.a
+#	deleted:    Assets/Plugins/iOS/libionimage.a.meta
+#	deleted:    Assets/Plugins/iOS/libionimagecompression.a
+#	deleted:    Assets/Plugins/iOS/libionimagecompression.a.meta
+#	deleted:    Assets/Plugins/iOS/libionjsoncpp.a
+#	deleted:    Assets/Plugins/iOS/libionjsoncpp.a.meta
+#	deleted:    Assets/Plugins/iOS/libionlodepnglib.a
+#	deleted:    Assets/Plugins/iOS/libionlodepnglib.a.meta
+#	deleted:    Assets/Plugins/iOS/libionmath.a
+#	deleted:    Assets/Plugins/iOS/libionmath.a.meta
+#	deleted:    Assets/Plugins/iOS/libionmongoose.a
+#	deleted:    Assets/Plugins/iOS/libionmongoose.a.meta
+#	deleted:    Assets/Plugins/iOS/libionopenctm.a
+#	deleted:    Assets/Plugins/iOS/libionopenctm.a.meta
+#	deleted:    Assets/Plugins/iOS/libionport.a
+#	deleted:    Assets/Plugins/iOS/libionport.a.meta
+#	deleted:    Assets/Plugins/iOS/libionportgfx.a
+#	deleted:    Assets/Plugins/iOS/libionportgfx.a.meta
+#	deleted:    Assets/Plugins/iOS/libionprofile.a
+#	deleted:    Assets/Plugins/iOS/libionprofile.a.meta
+#	deleted:    Assets/Plugins/iOS/libionremote.a
+#	deleted:    Assets/Plugins/iOS/libionremote.a.meta
+#	deleted:    Assets/Plugins/iOS/libionstblib.a
+#	deleted:    Assets/Plugins/iOS/libionstblib.a.meta
+#	deleted:    Assets/Plugins/iOS/libiontext.a
+#	deleted:    Assets/Plugins/iOS/libiontext.a.meta
+#	deleted:    Assets/Plugins/iOS/libionwebp.a
+#	deleted:    Assets/Plugins/iOS/libionwebp.a.meta
+#	deleted:    Assets/Plugins/iOS/libionzlib.a
+#	deleted:    Assets/Plugins/iOS/libionzlib.a.meta
+#	deleted:    Assets/Plugins/iOS/liblogging.a
+#	deleted:    Assets/Plugins/iOS/liblogging.a.meta
+#	deleted:    Assets/Plugins/iOS/liblogging_protos.a
+#	deleted:    Assets/Plugins/iOS/liblogging_protos.a.meta
+#	deleted:    Assets/Plugins/iOS/libplatform.a
+#	deleted:    Assets/Plugins/iOS/libplatform.a.meta
+#	deleted:    Assets/Plugins/iOS/libport.a
+#	deleted:    Assets/Plugins/iOS/libport.a.meta
+#	deleted:    Assets/Plugins/iOS/libprotobuf.a
+#	deleted:    Assets/Plugins/iOS/libprotobuf.a.meta
+#	deleted:    Assets/Plugins/iOS/libprotos_lib.a
+#	deleted:    Assets/Plugins/iOS/libprotos_lib.a.meta
+#	deleted:    Assets/Plugins/iOS/librecorder.a
+#	deleted:    Assets/Plugins/iOS/librecorder.a.meta
+#	deleted:    Assets/Plugins/iOS/libremote_assets.a
+#	deleted:    Assets/Plugins/iOS/libremote_assets.a.meta
+#	deleted:    Assets/Plugins/iOS/libsensors.a
+#	deleted:    Assets/Plugins/iOS/libsensors.a.meta
+#	deleted:    Assets/Plugins/iOS/libsoftware.a
+#	deleted:    Assets/Plugins/iOS/libsoftware.a.meta
+#	deleted:    Assets/Plugins/iOS/libtype.a
+#	deleted:    Assets/Plugins/iOS/libtype.a.meta
+#	deleted:    Assets/Plugins/iOS/libvr.a
+#	deleted:    Assets/Plugins/iOS/libvr.a.meta
+#	deleted:    Assets/Plugins/iOS/libvrunity.a
+#	deleted:    Assets/Plugins/iOS/libvrunity.a.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/objects-8.0+.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/objects-8.0+.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/objects.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/objects.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/runtime.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~ipad.nib/runtime.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/objects-8.0+.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/objects-8.0+.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/objects.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/objects.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/runtime.nib
+#	deleted:    Assets/Plugins/iOS/resources.bundle/SyncConfigViewController~iphone.nib/runtime.nib.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/cardboardLogotype.png
+#	deleted:    Assets/Plugins/iOS/resources.bundle/cardboardLogotype.png.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/continueButton.png
+#	deleted:    Assets/Plugins/iOS/resources.bundle/continueButton.png.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/onboardingBackground.jpg
+#	deleted:    Assets/Plugins/iOS/resources.bundle/onboardingBackground.jpg.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/qrSample.png
+#	deleted:    Assets/Plugins/iOS/resources.bundle/qrSample.png.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/rotateInstructions.png
+#	deleted:    Assets/Plugins/iOS/resources.bundle/rotateInstructions.png.meta
+#	deleted:    Assets/Plugins/iOS/resources.bundle/tickmarks.png
+#	deleted:    Assets/Plugins/iOS/resources.bundle/tickmarks.png.meta
+#	deleted:    Assets/Resources.meta
+#	deleted:    Assets/Resources/Sound.meta
+#	deleted:    Assets/Resources/Sound/Dark Wind 58 Second Loop.wav
+#	deleted:    Assets/Resources/Sound/Dark Wind 58 Second Loop.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete1.wav
+#	deleted:    Assets/Resources/Sound/concrete1.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete2.wav
+#	deleted:    Assets/Resources/Sound/concrete2.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete3.wav
+#	deleted:    Assets/Resources/Sound/concrete3.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete4.wav
+#	deleted:    Assets/Resources/Sound/concrete4.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete5.wav
+#	deleted:    Assets/Resources/Sound/concrete5.wav.meta
+#	deleted:    Assets/Resources/Sound/concrete6.wav
+#	deleted:    Assets/Resources/Sound/concrete6.wav.meta
+#	deleted:    Assets/Resources/Sound/gateScreech.wav
+#	deleted:    Assets/Resources/Sound/gateScreech.wav.meta
+#	deleted:    Assets/Resources/Sound/glassDroneLoop.wav
+#	deleted:    Assets/Resources/Sound/glassDroneLoop.wav.meta
+#	deleted:    Assets/Resources/Sound/metalFence1.wav
+#	deleted:    Assets/Resources/Sound/metalFence1.wav.meta
+#	deleted:    Assets/TBE_3Dception.meta
+#	deleted:    Assets/TBE_3Dception/Core.meta
+#	deleted:    Assets/TBE_3Dception/Core/TBE_3DCore.dll
+#	deleted:    Assets/TBE_3Dception/Core/TBE_3DCore.dll.meta
+#	deleted:    Assets/TBE_3Dception/Editor.meta
+#	deleted:    Assets/TBE_3Dception/Editor/TBE_3DEditor.dll
+#	deleted:    Assets/TBE_3Dception/Editor/TBE_3DEditor.dll.meta
+#	deleted:    Assets/TBE_3Dception/Plugins.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/Android.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/Android/libtbe_3Dception.so
+#	deleted:    Assets/TBE_3Dception/Plugins/Android/libtbe_3Dception.so.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/x86.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/x86/tbe_3Dception.dll
+#	deleted:    Assets/TBE_3Dception/Plugins/x86/tbe_3Dception.dll.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/x86_64.meta
+#	deleted:    Assets/TBE_3Dception/Plugins/x86_64/tbe_3Dception.dll
+#	deleted:    Assets/TBE_3Dception/Plugins/x86_64/tbe_3Dception.dll.meta
+#	deleted:    Assets/TBE_3Dception/Resources.meta
+#	deleted:    Assets/TBE_3Dception/Resources/tbe_null.wav
+#	deleted:    Assets/TBE_3Dception/Resources/tbe_null.wav.meta
+#	deleted:    Assets/TBE_3Dception/Splash.meta
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_Splash.unity
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_Splash.unity.meta
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_logo.psd
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_logo.psd.meta
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_logo_material.mat
+#	deleted:    Assets/TBE_3Dception/Splash/3Dception_logo_material.mat.meta
+#	deleted:    Assets/TBE_3Dception/TBE_Room.prefab
+#	deleted:    Assets/TBE_3Dception/TBE_Room.prefab.meta
+#	deleted:    Assets/TBE_3Dception/Utilities.meta
+#	deleted:    Assets/TBE_3Dception/Utilities/Editor.meta
+#	deleted:    Assets/TBE_3Dception/Utilities/Editor/TBE_Diagnose.cs
+#	deleted:    Assets/TBE_3Dception/Utilities/Editor/TBE_Diagnose.cs.meta
+#	deleted:    Assets/TBE_3Dception/Utilities/TBE_SRChange.cs
+#	deleted:    Assets/TBE_3Dception/Utilities/TBE_SRChange.cs.meta
+#	deleted:    Assets/butterfly 1.fbm.meta
+#	deleted:    Assets/butterfly 1.fbm/butterflyRef.jpg
+#	deleted:    Assets/butterfly 1.fbm/butterflyRef.jpg.meta
+#	deleted:    Assets/butterfly 1.fbm/butterflyRefNeg1.jpg
+#	deleted:    Assets/butterfly 1.fbm/butterflyRefNeg1.jpg.meta
+#	deleted:    Assets/butterfly.FBX
+#	deleted:    Assets/butterfly.fbm.meta
+#	deleted:    Assets/butterfly.fbm/butterflyRef.jpg
+#	deleted:    Assets/butterfly.fbm/butterflyRef.jpg.meta
+#	deleted:    Assets/butterfly.fbm/butterflyRefNeg1.jpg
+#	deleted:    Assets/butterfly.fbm/butterflyRefNeg1.jpg.meta
+#	deleted:    Assets/ext_door.fbm.meta
+#	deleted:    Assets/ext_door.fbm/Old_And_Rusty_Metal_Texture.jpg
+#	deleted:    Assets/ext_door.fbm/Old_And_Rusty_Metal_Texture.jpg.meta
+#	deleted:    Assets/ext_door.fbm/Rusty_Metal_Black.jpg
+#	deleted:    Assets/ext_door.fbm/Rusty_Metal_Black.jpg.meta
+#	deleted:    Assets/ext_door.fbm/pipes_rusted.jpg
+#	deleted:    Assets/ext_door.fbm/pipes_rusted.jpg.meta
+#	deleted:    Assets/scene1_exterior.meta
+#	deleted:    Assets/scene1_exterior.unity.meta
+#	deleted:    Assets/scene1_exterior/NavMesh.asset
+#	deleted:    Assets/scene1_exterior/NavMesh.asset.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Centrepice_granite.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Centrepice_granite.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Ground_Cobbles.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Ground_Cobbles.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Ground_Pavement.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Ground_Pavement.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Railing_Concrete.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Railing_Concrete.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Roof_Tiles.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Roof_Tiles.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Rusty_Metal_Black.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Rusty_Metal_Black.jpg.meta
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Stone_Wall.jpg
+#	deleted:    Assets/scene1_test2_unity (1).fbm/Stone_Wall.jpg.meta
+#	deleted:    Assets/transform.cs
+#	deleted:    Assets/transform.cs.meta
+#	deleted:    ProjectSettings/AudioManager.asset
+#	deleted:    ProjectSettings/DynamicsManager.asset
+#	deleted:    ProjectSettings/EditorBuildSettings.asset
+#	deleted:    ProjectSettings/EditorSettings.asset
+#	deleted:    ProjectSettings/GraphicsSettings.asset
+#	deleted:    ProjectSettings/InputManager.asset
+#	deleted:    ProjectSettings/NavMeshAreas.asset
+#	deleted:    ProjectSettings/NetworkManager.asset
+#	deleted:    ProjectSettings/Physics2DSettings.asset
+#	deleted:    ProjectSettings/TagManager.asset
+#	deleted:    ProjectSettings/TimeManager.asset
+#	deleted:    Scene_2/scene_2.FBX
+#
+
