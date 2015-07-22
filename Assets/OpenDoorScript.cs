@@ -17,9 +17,9 @@ public class OpenDoorScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//TODO Remove - for testing only
-		GameObject player = GameObject.Find("Player");
-		Vector3 currentPosition = player.transform.position;
-		player.transform.position = Vector3.MoveTowards(currentPosition, gameObject.transform.position, 0.05f);
+		//GameObject player = GameObject.Find("Player");
+		//Vector3 currentPosition = player.transform.position;
+		//player.transform.position = Vector3.MoveTowards(currentPosition, gameObject.transform.position, 0.05f);
 
 		if (doorState.Equals(DoorState.OPENING)){
 			Transform parentTransform = gameObject.transform.parent;
