@@ -14,7 +14,9 @@
 *.pidb
 *.booproj
 
+
 *.apk
+
 
 # Unity3D generated meta files
 *.pidb.meta
