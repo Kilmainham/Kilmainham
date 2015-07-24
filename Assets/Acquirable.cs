@@ -18,11 +18,11 @@ public class Acquirable : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	/*void Update () {
 		if (Input.GetMouseButtonDown(0)){
 			Acquire();
 			Debug.Log("Acquire CANDLE.");
 		}
 	
-	}
+	}*/
 }

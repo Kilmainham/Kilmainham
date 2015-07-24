@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Acquirable.cs" />
      <Compile Include="Assets\ActiveMarkers.cs" />
      <Compile Include="Assets\Cardboard VR Navigation\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Cardboard VR Navigation\Scripts\FootstepScript.cs" />
@@ -73,9 +74,11 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\VRDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\iOSVRDevice.cs" />
+     <Compile Include="Assets\ClockAnimator.cs" />
      <Compile Include="Assets\FlyingPathScript.cs" />
      <Compile Include="Assets\FollowFlyingPath.cs" />
      <Compile Include="Assets\LocationPoint.cs" />
+     <Compile Include="Assets\OpenDoorScript.cs" />
      <Compile Include="Assets\PathPointScript.cs" />
      <Compile Include="Assets\TBE_3Dception\Utilities\TBE_SRChange.cs" />
      <Compile Include="Assets\transform.cs" />
