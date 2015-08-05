@@ -22,6 +22,7 @@ public class ClockAnimator : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)){
 			ReverseOneHour();
 			Debug.Log("Pressed left click.");
+
 		}
 		time = time.AddSeconds (Time.deltaTime);
 		//change local rotation of the arrows around the Z axis
