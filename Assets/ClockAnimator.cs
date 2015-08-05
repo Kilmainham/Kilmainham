@@ -29,11 +29,11 @@ public class ClockAnimator : MonoBehaviour {
 	}
 	// method Update refreshes every frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0) && reversing == false){
+		/*if (Input.GetMouseButtonDown(0) && reversing == false){
 			StartReversal();
 			Debug.Log("Pressed left click.");
 
-		}
+		}*/
 		//if reversing is true
 		if (reversing){
 			//call method reversing
