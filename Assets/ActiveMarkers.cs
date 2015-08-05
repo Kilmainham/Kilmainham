@@ -8,7 +8,7 @@ public class ActiveMarkers : MonoBehaviour {
 	public CapsuleCollider collider;
 	//This array should contain the names of all the navigable location levels. A Level is a collection of points which can be accessed at the same time from a given point.
 	//From each point, all points in the level above and bellow are active. All other points are not.
-	private string[] tags = new string[]{"Level0", "Level1", "Level2", "Level3"};
+	private string[] tags = new string[]{"Level0", "Level1", "Level2", "Level3", "Level4", "Level5"};
 	void AddFadeComponents(){
 		for (int i = 0; i<tags.Length; i++) {
 			GameObject[] levelMarkers = GameObject.FindGameObjectsWithTag (tags [i]);
@@ -31,9 +31,11 @@ public class ActiveMarkers : MonoBehaviour {
 		}
 	}
 	void Start(){
-		AddFadeComponents ();
+		//AddFadeComponents ();
 		FadeAllOut ();
 		//fade in the first level markers
+
+
 		GameObject[] level1 = GameObject.FindGameObjectsWithTag(tags[1]);
 		foreach (GameObject marker in level1){
 			fade = marker.GetComponentInChildren<FadeObjectInOut>();
@@ -41,6 +43,9 @@ public class ActiveMarkers : MonoBehaviour {
 			collider = marker.GetComponentInChildren<CapsuleCollider>();
 			collider.enabled=true;
 		}
+
+
+
 	}
 
 	public void ActivateMarkers(){
