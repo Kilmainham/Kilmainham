@@ -31,7 +31,7 @@ public class OpenDoorScript : MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		//if this is true, the player entered the sphere and the door is opened
 		if (other.gameObject.name.Equals("Player")) {
-			if (closedRotationAngle >= 70f) {
+			if (closedRotationAngle >= 90f) {
 				doorState = DoorState.OPEN;
 				Debug.Log("open");
 			}
