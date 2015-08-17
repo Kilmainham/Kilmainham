@@ -5,6 +5,7 @@ public class LocationPoint : MonoBehaviour {
 
 	private NavMeshAgent agent;
 	private Vector3 selectedPoint;
+	private Vector3 lastPosition;
 
 	//declare external script
 	public FootstepScript steps;
@@ -23,22 +24,41 @@ public class LocationPoint : MonoBehaviour {
 	//		stopped when the pathfinder moves around an obstacle
 	void Update(){
 		//only check for 'stop' event while moving
-		if(!isStopped){
+
 			if (!this.agent.pathPending) {
 				if(this.agent.remainingDistance <= this.agent.stoppingDistance){
 					if(!this.agent.hasPath || this.agent.velocity.sqrMagnitude == 0f){
-						steps.stopFootsteps();
-						isStopped = true;
+						if(!isStopped){
+							steps.stopFootsteps();
+							
+							Debug.Log (this.agent.pathPending.ToString() + " " + this.agent.remainingDistance.ToString() + " " + this.agent.stoppingDistance.ToString() + " " + this.agent.hasPath.ToString() + " " + this.agent.velocity.sqrMagnitude.ToString() );
 
+							isStopped = true;
+							Debug.Log(this.transform.position);
+							
+						}
 					}
 				}
 			}
+		/*
+		if(!isStopped){
+			if(this.transform.position == lastPosition){
+				Debug.Log ("WE STOPPED IT SO WE DID");
+				steps.stopFootsteps();
+				isStopped = true;
+			}
 		}
+		*/
+		lastPosition = this.transform.position;
+
+
+		
 	}
 
 	public void MoveToLocationPoint(Component locationMarker){
 		selectedPoint = locationMarker.transform.position;
 		this.agent.destination = selectedPoint;
+		Debug.Log(this.transform.position);
 		steps.beginFootsteps();
 		isStopped = false;
 
