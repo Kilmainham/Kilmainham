@@ -51,6 +51,10 @@ public class OpenDoorScript : MonoBehaviour {
 			//converting/casting component to an object of type Collider
 			Collider doorCollider = (Collider) gameObject.GetComponent(typeof(Collider));
 			doorCollider.enabled = false;
+			GameObject actualDoor = transform.parent.gameObject;
+			Transform particleSystemTransform = transform.parent.FindChild("Particle System");
+			ParticleSystem particleSystem = (ParticleSystem) particleSystemTransform.GetComponent(typeof(ParticleSystem));
+			particleSystem.enableEmission = false;
 		}
 	}
 
