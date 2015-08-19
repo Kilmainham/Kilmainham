@@ -8,6 +8,8 @@ public class OpenDoorScript : MonoBehaviour {
 
 	private float closedRotationAngle = 0f;
 
+	public bool clockWiseOpenDoor = true;
+
 	// Use this for initialization
 	void Start () {
 		Transform parentTransform = gameObject.transform.parent;
@@ -20,24 +22,35 @@ public class OpenDoorScript : MonoBehaviour {
 		//GameObject player = GameObject.Find("Player");
 		//Vector3 currentPosition = player.transform.position;
 		//player.transform.position = Vector3.MoveTowards(currentPosition, gameObject.transform.position, 0.05f);
+		if (closedRotationAngle >= 70f || closedRotationAngle <= -70f) {
+			doorState = DoorState.OPEN;
+			Debug.Log("open");
+		}
 
 		if (doorState.Equals(DoorState.OPENING)){
+
+			float openingAngle;
+
+			if (clockWiseOpenDoor == true){
+				openingAngle = 2f;
+			}
+			else {
+				openingAngle = -2f;
+			}
+
 			Transform parentTransform = gameObject.transform.parent;
-			parentTransform.RotateAround(doorHingeTransform.position, Vector3.up, 2f);
-			closedRotationAngle = closedRotationAngle + 2f;
+			parentTransform.RotateAround(doorHingeTransform.position, Vector3.up, openingAngle);
+			closedRotationAngle = closedRotationAngle + openingAngle;
 		}
 	}
 
-	void OnTriggerStay(Collider other) {
+	void OnTriggerEnter(Collider other) {
 		//if this is true, the player entered the sphere and the door is opened
 		if (other.gameObject.name.Equals("Player")) {
-			if (closedRotationAngle >= 70f) {
-				doorState = DoorState.OPEN;
-				Debug.Log("open");
-			}
-			else {
-				OpenDoor();
-			}
+			OpenDoor();
+			//converting/casting component to an object of type Collider
+			Collider doorCollider = (Collider) gameObject.GetComponent(typeof(Collider));
+			doorCollider.enabled = false;
 		}
 	}
 
