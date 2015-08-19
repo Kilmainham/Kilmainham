@@ -8,11 +8,14 @@ public class OpenDoorScript : MonoBehaviour {
 
 	private float closedRotationAngle = 0f;
 
+	private AudioSource doorAudio;
+
 	// Use this for initialization
 	void Start () {
 		doorState = DoorState.CLOSED;
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
+		doorAudio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -49,7 +52,9 @@ public class OpenDoorScript : MonoBehaviour {
 	public void OpenDoor(){
 		if (doorState == DoorState.CLOSED){
 			Debug.Log("Opening");
+			doorAudio.Play();
 			doorState = DoorState.OPENING;
+
 		}
 	}
 }
