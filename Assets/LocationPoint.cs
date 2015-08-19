@@ -24,13 +24,15 @@ public class LocationPoint : MonoBehaviour {
 	//		stopped when the pathfinder moves around an obstacle
 	void LateUpdate(){
 		//only check for 'stop' event while moving
-		Debug.Log ("this.agent.pathPending" + this.agent.pathPending);
-		Debug.Log ("this.agent.remainingDistance" + this.agent.remainingDistance);
-		Debug.Log ("this.agent.stoppingDistance" + this.agent.stoppingDistance);
-		Debug.Log ("this.agent.hasPath" + this.agent.hasPath);
-		Debug.Log ("this.agent.velocity.sqrMagnitude" + this.agent.velocity.sqrMagnitude);
-		Debug.Log ("this.transform.position" + this.transform.position);
-		Debug.Log ("lastPosition" + lastPosition);
+
+		//Debug.Log ("this.agent.pathPending" + this.agent.pathPending);
+		//Debug.Log ("this.agent.remainingDistance" + this.agent.remainingDistance);
+		//Debug.Log ("this.agent.stoppingDistance" + this.agent.stoppingDistance);
+		//Debug.Log ("this.agent.hasPath" + this.agent.hasPath);
+		//Debug.Log ("this.agent.velocity.sqrMagnitude" + this.agent.velocity.sqrMagnitude);
+		//Debug.Log ("this.transform.position" + this.transform.position);
+		//Debug.Log ("lastPosition" + lastPosition);
+
 		if (footstepFrameCount > 5) {
 			if (!this.agent.pathPending) {
 				if (this.agent.remainingDistance <= this.agent.stoppingDistance) {
