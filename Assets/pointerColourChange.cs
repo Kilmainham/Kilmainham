@@ -23,7 +23,7 @@ public class pointerColourChange : MonoBehaviour {
 	void Update(){
 		if (gettingBigger) {
 			if (rgp.magconst<maxPointerSize){
-				rgp.magconst+=speed;
+				rgp.magconst+=speed*Time.deltaTime;
 
 			}else{
 				gettingBigger=false;
@@ -31,7 +31,7 @@ public class pointerColourChange : MonoBehaviour {
 		}
 		if (gettingSmaller) {
 			if(rgp.magconst>minPointerSize){
-				rgp.magconst-=speed;
+				rgp.magconst-=speed*Time.deltaTime;
 			}else{
 				gettingSmaller=false;
 			}

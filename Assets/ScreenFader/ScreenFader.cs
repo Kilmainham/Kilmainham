@@ -13,6 +13,7 @@ public class ScreenFader : MonoBehaviour {
 	public bool fadingOut = false;
 	// Use this for initialization
 	void Start () {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		fader = GameObject.Find ("ScreenFader");
 		rend = fader.GetComponent<Renderer> ();
 		black = new Material(shader );
