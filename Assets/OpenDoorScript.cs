@@ -2,20 +2,20 @@
 using System.Collections;
 
 public class OpenDoorScript : MonoBehaviour {
-
-	private DoorState doorState;
+	public bool doorTriggerActive;
+	public float openDegree = 90f;
+	private DoorState doorState = DoorState.CLOSED;
 	private Transform doorHingeTransform;
-
+	
 	private float closedRotationAngle = 0f;
-
-	private AudioSource doorAudio;
-
+	
+	public bool clockWiseOpenDoor = true;
+	
 	// Use this for initialization
 	void Start () {
-		doorState = DoorState.CLOSED;
+		doorTriggerActive = false;
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
-		doorAudio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -24,41 +24,48 @@ public class OpenDoorScript : MonoBehaviour {
 		//GameObject player = GameObject.Find("Player");
 		//Vector3 currentPosition = player.transform.position;
 		//player.transform.position = Vector3.MoveTowards(currentPosition, gameObject.transform.position, 0.05f);
-
-		if (doorState.Equals(DoorState.OPENING)){
-			Transform parentTransform = gameObject.transform.parent;
-			parentTransform.RotateAround(doorHingeTransform.position, Vector3.up, 2f);
-			closedRotationAngle = closedRotationAngle + 2f;
-			if (closedRotationAngle >= 90f) {
-				doorState = DoorState.OPEN;
-				Debug.Log("open");
-			}
+		if (closedRotationAngle >= openDegree || closedRotationAngle <= -openDegree) {
+			doorState = DoorState.OPEN;
+			Debug.Log("open");
 		}
-	}
-
-	/*void OnTriggerStay(Collider other) {
-		//if this is true, the player entered the sphere and the door is opened
-		if (other.gameObject.name.Equals("Player")) {
-			if (closedRotationAngle >= 90f) {
-				doorState = DoorState.OPEN;
-				Debug.Log("open");
+		
+		if (doorTriggerActive && doorState.Equals(DoorState.OPENING)){
+			
+			float openingAngle;
+			
+			if (clockWiseOpenDoor == true){
+				openingAngle = 2f;
 			}
 			else {
-				OpenDoor();
+				openingAngle = -2f;
 			}
+			
+			Transform parentTransform = gameObject.transform.parent;
+			parentTransform.RotateAround(doorHingeTransform.position, Vector3.up, openingAngle);
+			closedRotationAngle = closedRotationAngle + openingAngle;
 		}
-	}*/
-
-	public void OpenDoor(){
-		if (doorState == DoorState.CLOSED){
-			Debug.Log("Opening");
-			doorAudio.Play();
-			doorState = DoorState.OPENING;
-
+	}
+	
+	void OnTriggerEnter(Collider other) {
+		//if this is true, the player entered the sphere and the door is opened
+		if (doorTriggerActive && other.gameObject.name.Equals("Player")) {
+			OpenDoor();
+			//converting/casting component to an object of type Collider
+			Collider doorCollider = (Collider) gameObject.GetComponent(typeof(Collider));
+			doorCollider.enabled = false;
 		}
+	}
+	
+	void OpenDoor(){
+		Debug.Log("Opening");
+		doorState = DoorState.OPENING;
+	}
+	public void activateDoorTrigger(){
+		doorTriggerActive = true;
+		
 	}
 }
 
 public enum DoorState {
 	OPEN, CLOSED, OPENING
-}
+}	
