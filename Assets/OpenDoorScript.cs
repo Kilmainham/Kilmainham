@@ -13,7 +13,7 @@ public class OpenDoorScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		doorTriggerActive = false;
+		//doorTriggerActive = false;
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
 	}

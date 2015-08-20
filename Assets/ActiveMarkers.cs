@@ -2,58 +2,92 @@
 using System.Collections;
 
 public class ActiveMarkers : MonoBehaviour {
-	private GameObject[] locations;
 
 	public int currentLevel;
+	public FadeObjectInOut fade;
+	public CapsuleCollider collider;
 	//This array should contain the names of all the navigable location levels. A Level is a collection of points which can be accessed at the same time from a given point.
 	//From each point, all points in the level above and bellow are active. All other points are not.
-	private string[] tags = new string[]{"Level0", "Level1", "Level2", "Level3"};
-	/*ParticleSystem[] particles;
+	private string[] tags = new string[]{"Level0", "Level1", "Level2", "Level3", "Level4", "Level5"};
+	void AddFadeComponents(){
+		for (int i = 0; i<tags.Length; i++) {
+			GameObject[] levelMarkers = GameObject.FindGameObjectsWithTag (tags [i]);
+			foreach (GameObject marker in levelMarkers) {
+				marker.AddComponent<FadeObjectInOut> ();
+			}
+		}
+	}
+
+	void FadeAllOut(){
+		//fades out all markers
+		for (int i=0; i<tags.Length; i++) {
+			GameObject[] levelMarkers = GameObject.FindGameObjectsWithTag(tags[i]);
+			foreach (GameObject marker in levelMarkers){
+				fade = marker.GetComponentInChildren<FadeObjectInOut>();
+				fade.FadeOut();
+				collider = marker.GetComponentInChildren<CapsuleCollider>();
+				collider.enabled=false;
+			}
+		}
+	}
 	void Start(){
-		//DeactivateAllLevels ();
-		//ActivateFirstLevel ();
-		particles = GetComponents<ParticleSystem>;
-		foreach (ParticleSystem particle in particles){
-			if (particle.isPlaying) {
-				particle.Stop();
-			}
-		}
-	}*/
+		//AddFadeComponents ();
+		FadeAllOut ();
+		//fade in the first level markers
 
 
-	public void DeactivateAllLevels(){
-		locations = GameObject.FindGameObjectsWithTag ("LocationLevel");
-		Debug.Log (locations);
-		foreach (GameObject location in locations) {
-			Debug.Log(location);
-			location.SetActive(false);
+		GameObject[] level1 = GameObject.FindGameObjectsWithTag(tags[1]);
+		foreach (GameObject marker in level1){
+			fade = marker.GetComponentInChildren<FadeObjectInOut>();
+			fade.FadeIn();
+			collider = marker.GetComponentInChildren<CapsuleCollider>();
+			collider.enabled=true;
 		}
 
 
+
 	}
-	private void ActivateFirstLevel(){
-		GameObject firstLevel = GameObject.Find( tags[1] ); //Not 0, this is where the player starts.
-		firstLevel.SetActive(true);
-	}
+
 	public void ActivateMarkers(){
-		if (true) {
-			Debug.Log(GameObject.Find ("LocationContainer/Level1"));
-			GameObject currentLevelObject = GameObject.Find (tags [currentLevel]);
-			//currentLevelObject.SetActive (false);
-			Debug.Log ("current level int = " + currentLevel);
-		
-			if (currentLevel != tags.GetLength (0)) {
-				//Debug.Log("LocationContainer/"+tags [currentLevel + 1]);
-				Debug.Log (GameObject.Find ("LocationContainer/"+tags [currentLevel + 1]));
-				GameObject nextLevelObject = GameObject.Find (tags [currentLevel + 1]);
-				nextLevelObject.SetActive (true);
+		FadeAllOut();
+		string currentLevelString = tags [currentLevel];
+		Debug.Log (currentLevel);
+
+		GameObject[] currentMarkers = GameObject.FindGameObjectsWithTag(currentLevelString);
+		foreach (GameObject marker in currentMarkers) {
+
+			fade = marker.GetComponentInChildren<FadeObjectInOut>();
+			fade.FadeOut ();
+			collider = marker.GetComponentInChildren<CapsuleCollider>();
+			collider.enabled=false;
+			Debug.Log ("Current level faded out");
+
+		}
+		if (currentLevel > 0) {
+			string previousLevelString = tags [currentLevel-1];
+			GameObject[] previousMarkers = GameObject.FindGameObjectsWithTag(previousLevelString);
+			foreach (GameObject marker in previousMarkers){
+				fade = marker.GetComponentInChildren<FadeObjectInOut>();
+				fade.FadeIn();
+				collider = marker.GetComponentInChildren<CapsuleCollider>();
+				collider.enabled=true;
+				Debug.Log ("Previous level faded in");
 			}
-			if (currentLevel != 0) {
-				Debug.Log("previous name ="+ tags [currentLevel - 1]);
-				GameObject prevLevelObject = GameObject.Find (tags [currentLevel - 1]);
-				prevLevelObject.SetActive (true);
+		
+		}
+
+		if (currentLevel < tags.Length-1) {
+			string nextLevelString = tags[currentLevel+1];
+			GameObject[] nextMarkers = GameObject.FindGameObjectsWithTag(nextLevelString);
+			foreach (GameObject marker in nextMarkers ){
+				fade = marker.GetComponentInChildren<FadeObjectInOut>();
+				fade.FadeIn();
+				collider = marker.GetComponentInChildren<CapsuleCollider>();
+				collider.enabled=true;
+				Debug.Log ("Next level faded in");
 			}
 		}
+
 	}
 
 

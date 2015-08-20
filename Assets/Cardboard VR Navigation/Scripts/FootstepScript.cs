@@ -19,14 +19,14 @@ public class FootstepScript : MonoBehaviour {
 	private int lastClip;
 	private string lvlName;
 	private AudioClip[] stepsForLevel;
-
+	
 	// Use this for initialization
 	void Start () {
-
+		
 		//Debug.Log(Application.loadedLevelName);
 		lvlName = Application.loadedLevelName.Substring(0,6);
 		Debug.Log (lvlName);
-	
+		
 		//load the concrete footstep clips
 		concreteFootsteps =  new AudioClip[]
 		{	
@@ -36,7 +36,7 @@ public class FootstepScript : MonoBehaviour {
 			Resources.Load("Sound/Player/ConcreteSteps/concrete4")   as AudioClip
 			
 		};
-
+		
 		//load the wooden footstep clips
 		woodenFootsteps =  new AudioClip[]
 		{	
@@ -55,10 +55,10 @@ public class FootstepScript : MonoBehaviour {
 		myAudio.reverbZoneMix = 1f; //use reverb zones
 		myAudio.panStereo = -legPan; //left foot first (source panned 50% left)
 		isLeftLeg = true;
-
+		
 		if(lvlName == "Scene4"){
 			stepsForLevel = woodenFootsteps;
-
+			
 		}
 		else{
 			stepsForLevel = concreteFootsteps;
@@ -67,21 +67,21 @@ public class FootstepScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 	
 	//called from PlayerMoter script when movement begins
 	public void beginFootsteps(){
-
+		
 		InvokeRepeating("playFootsteps",walkSpeed,walkSpeed);
 	}
-
+	
 	//called from PlayerMoter script when movement ends 
 	public void stopFootsteps(){
-
+		
 		CancelInvoke("playFootsteps");
 	}
-
+	
 	void playFootsteps(){
 		
 		// don't let clips overlap
@@ -90,7 +90,7 @@ public class FootstepScript : MonoBehaviour {
 			// slightly vary pitch and volume of each sample
 			myAudio.pitch = Random.Range(0.9f, 1.1f);
 			myAudio.volume = Random.Range(0.3f, 0.6f);
-
+			
 			//pick random array index but don't repeat two in a row
 			randomClip = Random.Range(0,4);
 			while(randomClip == lastClip){
@@ -98,10 +98,10 @@ public class FootstepScript : MonoBehaviour {
 			}
 			//remember most recent clip for comparison
 			lastClip = randomClip;
-
+			
 			//switch L to R
 			if(isLeftLeg){
-
+				
 				//play a random clip from the array
 				myAudio.PlayOneShot(stepsForLevel[randomClip]);
 				//switch legs (stereo pan settings)
@@ -109,7 +109,7 @@ public class FootstepScript : MonoBehaviour {
 				isLeftLeg = false;
 				return;
 			}
-
+			
 			//switch R to L
 			if(!isLeftLeg){
 				//play a random clip from the array
