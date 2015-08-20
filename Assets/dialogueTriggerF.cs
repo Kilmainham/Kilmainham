@@ -20,8 +20,8 @@ public class dialogueTriggerF : MonoBehaviour {
 		sceneStarted = false;
 		activeTrigger = false;
 
-		exitDoorObj = GameObject.Find ("OpenDoorTrigger");
-		exitDoorScript = exitDoorObj.GetComponent<OpenDoorScript>();
+
+		exitDoorScript = GameObject.Find ("OpenDoorTrigger").GetComponent<OpenDoorScript>();
 		Debug.Log (exitDoorScript);
 	}
 	
@@ -39,6 +39,7 @@ public class dialogueTriggerF : MonoBehaviour {
 			//this trigger is for CHAPEL SCENE PART II
 			externalScriptChapel.triggerClipRoutine(5);
 			Debug.Log ("TRIGGERED F");
+			exitDoorScript.activateDoorTrigger();
 		}        
 	}
 	
