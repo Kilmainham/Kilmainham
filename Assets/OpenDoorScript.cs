@@ -3,15 +3,19 @@ using System.Collections;
 
 public class OpenDoorScript : MonoBehaviour {
 
-	private DoorState doorState = DoorState.CLOSED;
+	private DoorState doorState;
 	private Transform doorHingeTransform;
 
 	private float closedRotationAngle = 0f;
 
+	private AudioSource doorAudio;
+
 	// Use this for initialization
 	void Start () {
+		doorState = DoorState.CLOSED;
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
+		doorAudio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -25,13 +29,17 @@ public class OpenDoorScript : MonoBehaviour {
 			Transform parentTransform = gameObject.transform.parent;
 			parentTransform.RotateAround(doorHingeTransform.position, Vector3.up, 2f);
 			closedRotationAngle = closedRotationAngle + 2f;
+			if (closedRotationAngle >= 90f) {
+				doorState = DoorState.OPEN;
+				Debug.Log("open");
+			}
 		}
 	}
 
-	void OnTriggerStay(Collider other) {
+	/*void OnTriggerStay(Collider other) {
 		//if this is true, the player entered the sphere and the door is opened
 		if (other.gameObject.name.Equals("Player")) {
-			if (closedRotationAngle >= 70f) {
+			if (closedRotationAngle >= 90f) {
 				doorState = DoorState.OPEN;
 				Debug.Log("open");
 			}
@@ -39,11 +47,15 @@ public class OpenDoorScript : MonoBehaviour {
 				OpenDoor();
 			}
 		}
-	}
+	}*/
 
-	void OpenDoor(){
-		Debug.Log("Opening");
-		doorState = DoorState.OPENING;
+	public void OpenDoor(){
+		if (doorState == DoorState.CLOSED){
+			Debug.Log("Opening");
+			doorAudio.Play();
+			doorState = DoorState.OPENING;
+
+		}
 	}
 }
 

@@ -51,7 +51,7 @@ public class ActiveMarkers : MonoBehaviour {
 	public void ActivateMarkers(){
 		FadeAllOut();
 		string currentLevelString = tags [currentLevel];
-		//Debug.Log (currentLevel);
+		Debug.Log (currentLevel);
 
 		GameObject[] currentMarkers = GameObject.FindGameObjectsWithTag(currentLevelString);
 		foreach (GameObject marker in currentMarkers) {
@@ -60,7 +60,7 @@ public class ActiveMarkers : MonoBehaviour {
 			fade.FadeOut ();
 			collider = marker.GetComponentInChildren<CapsuleCollider>();
 			collider.enabled=false;
-			//Debug.Log ("Current level faded out");
+			Debug.Log ("Current level faded out");
 
 		}
 		if (currentLevel > 0) {
@@ -71,7 +71,7 @@ public class ActiveMarkers : MonoBehaviour {
 				fade.FadeIn();
 				collider = marker.GetComponentInChildren<CapsuleCollider>();
 				collider.enabled=true;
-				//Debug.Log ("Previous level faded in");
+				Debug.Log ("Previous level faded in");
 			}
 		
 		}
@@ -84,7 +84,7 @@ public class ActiveMarkers : MonoBehaviour {
 				fade.FadeIn();
 				collider = marker.GetComponentInChildren<CapsuleCollider>();
 				collider.enabled=true;
-				//Debug.Log ("Next level faded in");
+				Debug.Log ("Next level faded in");
 			}
 		}
 
