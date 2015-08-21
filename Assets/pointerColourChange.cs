@@ -10,8 +10,9 @@ public class pointerColourChange : MonoBehaviour {
 	public float speed=0.05f;
 	public float maxPointerSize=0.04f;
 	public float minPointerSize=0.01f;
-	public Color activeColour = Color.red;
+	public Color activeColour = Color.green;
 	public Color inactiveColour = Color.white;
+	public Color specialColour = Color.blue;
 
 	void Start () {
 		pointer = GameObject.Find("GazePointer");
@@ -23,7 +24,7 @@ public class pointerColourChange : MonoBehaviour {
 	void Update(){
 		if (gettingBigger) {
 			if (rgp.magconst<maxPointerSize){
-				rgp.magconst+=speed;
+				rgp.magconst+=speed*Time.deltaTime;
 
 			}else{
 				gettingBigger=false;
@@ -31,7 +32,7 @@ public class pointerColourChange : MonoBehaviour {
 		}
 		if (gettingSmaller) {
 			if(rgp.magconst>minPointerSize){
-				rgp.magconst-=speed;
+				rgp.magconst-=speed*Time.deltaTime;
 			}else{
 				gettingSmaller=false;
 			}
@@ -54,6 +55,12 @@ public class pointerColourChange : MonoBehaviour {
 		rend.material.color = inactiveColour;
 		gettingSmaller = true;
 		gettingBigger = false;
+	}
+
+	public void enterSpecial(){
+		rend.material.color = specialColour;
+		gettingBigger = true;
+		gettingSmaller = false;
 	}
 
 

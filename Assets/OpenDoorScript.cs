@@ -49,6 +49,7 @@ public class OpenDoorScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		//if this is true, the player entered the sphere and the door is opened
 		if (doorTriggerActive && other.gameObject.name.Equals("Player")) {
+			//Debug.Log ("colision");
 			OpenDoor();
 			//converting/casting component to an object of type Collider
 			Collider doorCollider = (Collider) gameObject.GetComponent(typeof(Collider));

@@ -1234,6 +1234,75 @@ ModelImporter:
     4300132: Object010
     4300134: ClockFace
     4300136: Box014
+    6400000: Box001
+    6400002: Box001 1
+    6400004: Box003
+    6400006: Box004
+    6400008: Box007
+    6400010: Box008
+    6400012: Box012
+    6400014: Box013
+    6400016: Box014
+    6400018: ClockFace
+    6400020: Object001
+    6400022: Object002
+    6400024: Object003
+    6400026: Object004
+    6400028: Object005
+    6400030: Object006
+    6400032: Object007
+    6400034: Object008
+    6400036: Object009
+    6400038: Object010
+    6400040: pCube10
+    6400042: pCube106
+    6400044: pCube108
+    6400046: pCube12
+    6400048: pCube14
+    6400050: pCube20
+    6400052: pCube24
+    6400054: pCube34
+    6400056: pCube37
+    6400058: pCube39
+    6400060: pCube40
+    6400062: pCube41
+    6400064: pCube42
+    6400066: pCube48
+    6400068: pCube60
+    6400070: pCube61
+    6400072: pCube62
+    6400074: pCube63
+    6400076: pCube7
+    6400078: pCube75
+    6400080: pCube76
+    6400082: pCube8
+    6400084: pCube83
+    6400086: pCube9
+    6400088: pCylinder16
+    6400090: pCylinder17
+    6400092: pCylinder18
+    6400094: pCylinder19
+    6400096: pCylinder21
+    6400098: polySurface102
+    6400100: polySurface121
+    6400102: polySurface122
+    6400104: polySurface123
+    6400106: polySurface124
+    6400108: polySurface127
+    6400110: polySurface128
+    6400112: polySurface135
+    6400114: polySurface71
+    6400116: polySurface95
+    6400118: polySurface96
+    6400120: polySurface97
+    6400122: polySurface98
+    6400124: polySurface99
+    6400126: pPlane1
+    6400128: window
+    6400130: Windows003
+    6400132: Windows004
+    6400134: Windows2
+    6400136: wondow_02
   materials:
     importMaterials: 1
     materialName: 0
@@ -1259,7 +1328,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

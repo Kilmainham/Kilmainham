@@ -33,7 +33,7 @@ public class ResizeGazePointer : MonoBehaviour {
 
 		//Debug.Log (playerlocation);
 		//Debug.Log(this.transform.position);
-		transform.localScale = new Vector3(distancemagnitude*magconst, 0, distancemagnitude*magconst);
+		transform.localScale = new Vector3(distancemagnitude*magconst, 0f, distancemagnitude*magconst);
 
 	}
 }

@@ -7,8 +7,8 @@ public class Flicker : MonoBehaviour {
 	GameObject candleObject;
 
 	public float speed = 0.01f;
-	float topIntensity = 2.25f;
-	float bottomIntensity = 1.0f;
+	float topIntensity = 1.5f;
+	float bottomIntensity = 0.5f;
 
 	float intensity;
 	void Start () {
