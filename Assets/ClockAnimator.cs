@@ -56,9 +56,6 @@ public class ClockAnimator : MonoBehaviour {
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.clip = Resources.Load("Sound/Objects/Chime Trio") as AudioClip;
 			audio.Play ();
-			//stop tick tock audio
-			TBE_3DCore.TBE_Source tickTock = GetComponent<TBE_3DCore.TBE_Source>();
-			tickTock.Stop ();
 			//stop Grace Crying
 			externalScript.stopGraceCrying();
 			//activate next conversation
@@ -72,6 +69,9 @@ public class ClockAnimator : MonoBehaviour {
 		if (activeChallenge && numberOfReversals < maximumReversal && reversing == false && complete == false){
 			targetTime = time.AddSeconds(-totalTimeToBeReversed);
 			reversing = true;
+			//stop tick tock audio
+			TBE_3DCore.TBE_Source tickTock = GetComponent<TBE_3DCore.TBE_Source>();
+			tickTock.Stop ();
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.Play();
 			numberOfReversals++;

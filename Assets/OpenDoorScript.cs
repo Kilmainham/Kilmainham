@@ -10,12 +10,15 @@ public class OpenDoorScript : MonoBehaviour {
 	private float closedRotationAngle = 0f;
 	
 	public bool clockWiseOpenDoor = true;
+
+	private AudioSource doorAudio;
 	
 	// Use this for initialization
 	void Start () {
 		//doorTriggerActive = false;
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
+		doorAudio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -59,6 +62,7 @@ public class OpenDoorScript : MonoBehaviour {
 	
 	void OpenDoor(){
 		Debug.Log("Opening");
+		doorAudio.Play();
 		doorState = DoorState.OPENING;
 	}
 	public void activateDoorTrigger(){
