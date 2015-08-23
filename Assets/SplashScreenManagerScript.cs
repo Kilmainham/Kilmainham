@@ -49,6 +49,7 @@ public class SplashScreenManagerScript : MonoBehaviour {
 		if (timer > 0f && screenfader.FadeOutIsComplete()) {
 			if (currentSplashScreenIndex == splashScreens.Count - 1) {
 				//load next scene:
+				Application.LoadLevel("MainMenu");
 			}
 			else {
 				nextSplashScreen();
@@ -57,12 +58,14 @@ public class SplashScreenManagerScript : MonoBehaviour {
 	}
 
 	void nextSplashScreen (){
-		if (currentSplashScreenIndex + 1 < splashScreens.Count){
+		if (currentSplashScreenIndex + 1 < splashScreens.Count) {
 			currentSplashScreenIndex = currentSplashScreenIndex + 1;
-		}
+
+		} 
 		disablePreviousEnableCurrentSS ();
 		screenfader.startFadeIn ();
 		timer = 0f;
+
 	}
 
 	private void disablePreviousEnableCurrentSS() {
