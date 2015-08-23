@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ScreenFader : MonoBehaviour {
-	public GameObject fader;
+	//public GameObject fader;
 	Renderer rend;
 	public Color faderColor;
 	public float alpha = 1.0f;
@@ -12,8 +12,9 @@ public class ScreenFader : MonoBehaviour {
 
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
-		fader = GameObject.Find ("ScreenFader");
-		rend = fader.GetComponent<Renderer> ();
+		//fader = GameObject.Find ("ScreenFader");
+		//rend = fader.GetComponent<Renderer> ();
+		rend = gameObject.GetComponent<Renderer> ();
 		rend.enabled = true;
 	}
 	
