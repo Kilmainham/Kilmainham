@@ -9,6 +9,7 @@ public class ScreenFader : MonoBehaviour {
 	public bool fadingIn = true;
 	public bool fadingOut = false;
 	// Use this for initialization
+
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		fader = GameObject.Find ("ScreenFader");
@@ -50,5 +51,22 @@ public class ScreenFader : MonoBehaviour {
 	}
 	public void startFadeOut(){
 		fadingOut = true;
+		fadingIn = false;
+	}
+
+	public void startFadeIn(){
+		fadingIn = true;
+		fadingOut = false;
+	}
+
+	//return true if fadeIn is complete
+	public bool FadeInIsComplete () {
+		return alpha <=0f;
+
+	}
+	// return true if fadeOut is complete
+	public bool FadeOutIsComplete () {
+		return alpha >=1f;
+		
 	}
 }
