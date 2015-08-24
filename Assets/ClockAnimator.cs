@@ -60,6 +60,11 @@ public class ClockAnimator : MonoBehaviour {
 			externalScript.stopGraceCrying();
 			//activate next conversation
 			scriptTrigSceneF.externalCallbackActivate();
+			
+			GameObject particleSystem = GameObject.Find("Particle System");
+			ParticleSystem particleComponent = particleSystem.GetComponent<ParticleSystem>();
+			particleComponent.enableEmission = false;
+			
 		}
 	}
 	
@@ -95,7 +100,9 @@ public class ClockAnimator : MonoBehaviour {
 	//called from dialogueTriggerE script
 	public void activateChallenge(){
 		activeChallenge = true;
-		
+		GameObject particleSystem = GameObject.Find("Particle System");
+		ParticleSystem particleComponent = particleSystem.GetComponent<ParticleSystem>();
+		particleComponent.enableEmission = true;
 	}
 	
 }

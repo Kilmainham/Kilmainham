@@ -6,7 +6,7 @@ public class Flicker : MonoBehaviour {
 	Light candleLight;
 	GameObject candleObject;
 
-	public float speed = 0.01f;
+	//public float speed = 0.01f;
 	public float topIntensity = 3.5f;
 	public float bottomIntensity = 0.5f;
 
@@ -19,11 +19,17 @@ public class Flicker : MonoBehaviour {
 	
 
 	void Update () {
-		candleLight.intensity = intensity;
-		intensity += speed*Time.deltaTime;
-		if (intensity > topIntensity || intensity < bottomIntensity) {
-			speed = speed * -1;
+		//candleLight.intensity = intensity;
+		//intensity += speed*Time.deltaTime;
+		//if (intensity > topIntensity || intensity < bottomIntensity) {
+			//speed = speed * -1;
+		//}
+		int randomizer = Random.Range (0, 10);
+		if (randomizer == 1){
+			candleLight.intensity = topIntensity;
 		}
-
+		else {
+			candleLight.intensity = bottomIntensity;
+		}
 	}
 }
