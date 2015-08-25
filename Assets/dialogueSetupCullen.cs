@@ -11,9 +11,9 @@ public class dialogueSetupCullen : MonoBehaviour {
 		cullenAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		cullenDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/cullenLine1")   as AudioClip,
-			Resources.Load("Sound/cullenLine2")   as AudioClip,
-			Resources.Load("Sound/cullenLine3")   as AudioClip
+			Resources.Load("Sound/Dialogue/cullen/cullenLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/cullen/cullenLine2")   as AudioClip,
+			Resources.Load("Sound/Dialogue/cullen/cullenLine3")   as AudioClip
 			
 		};
 		

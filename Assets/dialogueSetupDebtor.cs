@@ -10,9 +10,9 @@ public class dialogueSetupDebtor : MonoBehaviour {
 		debtorAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		debtorDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/debtorLine1")   as AudioClip,
-			Resources.Load("Sound/debtorLine2")   as AudioClip,
-			Resources.Load("Sound/debtorLine3")   as AudioClip
+			Resources.Load("Sound/Dialogue/debtor/debtorLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/debtor/debtorLine2")   as AudioClip,
+			Resources.Load("Sound/Dialogue/debtor/debtorLine3")   as AudioClip
 			
 		};
 	

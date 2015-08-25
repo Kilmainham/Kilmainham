@@ -91,12 +91,14 @@ public class OpenDoorScript : MonoBehaviour {
 	public bool clockWiseOpenDoor = true;
 	
 	private AudioSource doorOpenAudio;
+	private AudioClip closedClip;
 	
 	// Use this for initialization
 	void Start () {
 		Transform parentTransform = gameObject.transform.parent;
 		doorHingeTransform = parentTransform.FindChild("Hinge");
 		doorOpenAudio = GetComponent<AudioSource>();
+		closedClip = (AudioClip)Resources.Load("Sound/Objects/Locked Door");
 	}
 	
 	// Update is called once per frame
@@ -135,6 +137,14 @@ public class OpenDoorScript : MonoBehaviour {
 			Collider doorCollider = (Collider) gameObject.GetComponent(typeof(Collider));
 			doorCollider.enabled = false;
 		}
+		if(!doorTriggerActive){
+			Debug.Log ("LOCKED");
+
+		}
+
+		Debug.Log ("ENTERED");
+
+
 	}
 	
 	public void OpenDoor(){
@@ -149,7 +159,13 @@ public class OpenDoorScript : MonoBehaviour {
 				particleSystem.enableEmission = false;
 			}
 		}
+		if (!doorTriggerActive){
+			doorOpenAudio.PlayOneShot(closedClip);
+		}
+
+		Debug.Log ("CLICKED DOOR");
 	}
+
 	public void activateDoorTrigger(){
 		doorTriggerActive = true;
 		

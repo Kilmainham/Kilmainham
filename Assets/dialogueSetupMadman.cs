@@ -11,8 +11,8 @@ public class dialogueSetupMadman : MonoBehaviour {
 		madmanAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		madmanDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/madmanLine1")   as AudioClip,
-			Resources.Load("Sound/madmanLine2")   as AudioClip
+			Resources.Load("Sound/Dialogue/madman/madmanLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/madman/madmanLine2")   as AudioClip
 			
 		};
 		

@@ -11,8 +11,8 @@ public class dialogueSetupVagrant : MonoBehaviour {
 		vagrantAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		vagrantDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/vagrantLine1")   as AudioClip,
-			Resources.Load("Sound/vagrantLine2")   as AudioClip
+			Resources.Load("Sound/Dialogue/vagrant/vagrantLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/vagrant/vagrantLine2")   as AudioClip
 			
 		};
 		
