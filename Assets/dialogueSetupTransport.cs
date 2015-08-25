@@ -10,9 +10,9 @@ public class dialogueSetupTransport : MonoBehaviour {
 		transportAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		transportDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/transportLine1")   as AudioClip,
-			Resources.Load("Sound/transportLine2")   as AudioClip,
-			Resources.Load("Sound/transportLine3")   as AudioClip
+			Resources.Load("Sound/Dialogue/transport/transportLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/transport/transportLine2")   as AudioClip,
+			Resources.Load("Sound/Dialogue/transport/transportLine3")   as AudioClip
 			
 		};
 	}

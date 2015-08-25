@@ -11,8 +11,8 @@ public class dialogueSetupThief : MonoBehaviour {
 		thiefAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		thiefDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/thiefLine1")   as AudioClip,
-			Resources.Load("Sound/thiefLine2")   as AudioClip
+			Resources.Load("Sound/Dialogue/thief/thiefLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/thief/thiefLine2")   as AudioClip
 			
 		};
 		

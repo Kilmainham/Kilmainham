@@ -11,8 +11,8 @@ public class dialogueSetupNeary : MonoBehaviour {
 		nearyAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		nearyDialogueArray =  new AudioClip[]
 		{	
-			Resources.Load("Sound/nearyLine1")   as AudioClip,
-			Resources.Load("Sound/nearyLine2")   as AudioClip
+			Resources.Load("Sound/Dialogue/neary/nearyLine1")   as AudioClip,
+			Resources.Load("Sound/Dialogue/neary/nearyLine2")   as AudioClip
 			
 		};
 		
