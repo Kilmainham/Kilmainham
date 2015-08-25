@@ -3,7 +3,7 @@ using System.Collections;
 
 public class binocularsScript : MonoBehaviour {
 
-	private const int ZOOM_IN_FIELD_OF_VIEW = 20;
+	private const int ZOOM_IN_FIELD_OF_VIEW = 15;
 	private const int ZOOM_OUT_FIELD_OF_VIEW = 30;
 
 	
@@ -12,17 +12,7 @@ public class binocularsScript : MonoBehaviour {
 		gameObject.SetActive(enable);
 		EnableDisableZoom(enable);
 	}
-
-	// Use this for initialization
-	void Start () {
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void EnableDisableZoom (bool enable) {
 		int newFieldOfView;
 		if (enable == true) {
