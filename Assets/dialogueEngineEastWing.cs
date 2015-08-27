@@ -2,7 +2,15 @@
 using System.Collections;
 
 public class dialogueEngineEastWing : MonoBehaviour {
-	
+	// Ghosts
+
+	public GameObject guard12Ghost;
+	public GuardsFadeIn guards12Fade;
+
+	public GameObject guard3Ghost;
+	public GuardsFadeIn guards3Fade;
+
+
 	//setup character 8 = GUARD 1
 	public dialogueSetupGuard1 characterEightScript;
 	public GameObject guard1Obj;
@@ -42,6 +50,13 @@ public class dialogueEngineEastWing : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
+		//initiialise ghost mesh
+		guard12Ghost = GameObject.Find ("Guards1+2");
+		guards12Fade = guard12Ghost.GetComponent<GuardsFadeIn>();
+		
+		guard3Ghost = GameObject.Find ("Guard3Ghost");
+		guards3Fade = guard3Ghost.GetComponent<GuardsFadeIn>();
+
 		//initialise scene D
 		trigSceneD = GameObject.Find("Trigger D");
 		scriptTrigSceneD = trigSceneD.GetComponent<dialogueTriggerD>();
@@ -64,8 +79,6 @@ public class dialogueEngineEastWing : MonoBehaviour {
 		//initialise line params
 		lineNumber = 0;
 		linePause = 0.1f;
-
-		Debug.Log ("Awake");
 		
 	}
 	
@@ -78,7 +91,7 @@ public class dialogueEngineEastWing : MonoBehaviour {
 		//East Wing
 		if (whichRoutine == 3 && sceneDDialoguePlayed == false){
 			StartCoroutine(playSceneD(1));
-			Debug.Log ("COROUTINE D");
+			guards12Fade.fadeGhostsIn();
 		}
 	}
 	
@@ -88,11 +101,13 @@ public class dialogueEngineEastWing : MonoBehaviour {
 			scriptTrigSceneD.externalCallbackDeactivate();
 			sceneDDialoguePlaying = false;
 			sceneDDialoguePlayed = true;
-			Debug.Log("RESET D");
 		}
 		lineNumber = 0;
 	}
-	
+
+	void fadeOutGhosts(){
+		guards12Fade.fadeGhostsOut();
+	}
 	//the coroutine for the fourth conversation
 	public IEnumerator playSceneD(int lineCount){
 		
@@ -107,11 +122,18 @@ public class dialogueEngineEastWing : MonoBehaviour {
 		yield return new WaitForSeconds((lineLength + linePause));
 		
 		lineNumber = lineNumber + 1;
-		
+
+
+
 		charEightSource.PlayOneShot(charEightLines[lineNumber]);
 		lineLength = getCurrentClipLength(charEightLines[lineNumber]);
-		yield return new WaitForSeconds((lineLength + linePause + 4f));
-		
+		yield return new WaitForSeconds((lineLength + linePause));
+
+		fadeOutGhosts ();
+		yield return new WaitForSeconds(4f);
+
+		guards3Fade.fadeGhostsIn ();
+
 		charTenSource.PlayOneShot(charTenLines[0]);
 		lineLength = getCurrentClipLength(charTenLines[0]);
 		yield return new WaitForSeconds((lineLength + linePause + 6f));

@@ -16,7 +16,6 @@ public class dialogueTriggerD : MonoBehaviour {
 		isColliding = false;
 		sceneStarted = false;
 		activeTrigger = true;
-		Debug.Log ("Awake Trigger");
 	}
 	
 	// Update is called once per frame
@@ -31,7 +30,6 @@ public class dialogueTriggerD : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for EAST WING GUARDS
 			externalScriptEastWing.triggerClipRoutine(3);
-			Debug.Log ("TRIGGERED D");
 		}        
 	}
 	

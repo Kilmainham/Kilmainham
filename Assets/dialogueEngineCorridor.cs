@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class dialogueEngineCorridor : MonoBehaviour {
+	//setup door triggers
+	GameObject doorTrigger2;
+	GameObject doorTrigger3;
+	OpenDoorScript doorScript2;
+	OpenDoorScript doorScript3;
 
 	//setup character 1 = TRANSPORT
 	public dialogueSetupTransport characterOneScript;
@@ -65,8 +70,7 @@ public class dialogueEngineCorridor : MonoBehaviour {
 	public bool sceneCDialoguePlaying;
 	public bool sceneCDialoguePlayed;
 
-	
-	
+
 	// setup dialogue parameters
 	public int lineNumber;
 	public float lineLength;
@@ -76,6 +80,13 @@ public class dialogueEngineCorridor : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
+		//Initialise Door Triggers
+		doorTrigger2 = GameObject.Find ("OpenDoorTrigger2");
+		doorTrigger3 = GameObject.Find ("OpenDoorTrigger3");
+		doorScript2 = doorTrigger2.GetComponent<OpenDoorScript> ();
+		doorScript3 = doorTrigger3.GetComponent<OpenDoorScript> ();
+		doorScript2.doorTriggerActive = false;
+		doorScript3.doorTriggerActive = false;
 
 		//initialise scene A
 		trigSceneA = GameObject.Find("Trigger A");
@@ -141,17 +152,16 @@ public class dialogueEngineCorridor : MonoBehaviour {
 		//Corridors
 		if (whichRoutine == 0 && sceneADialoguePlayed == false){
 			StartCoroutine(playSceneA(3));
-			Debug.Log ("COROUTINE A");
 		}
 		
 		if (whichRoutine == 1 && sceneADialoguePlayed && sceneBDialoguePlayed == false){
 			StartCoroutine(playSceneB(1));
-			Debug.Log ("COROUTINE B");
+			doorScript2.doorTriggerActive=true;
 		}
 		
 		if (whichRoutine == 2 && sceneBDialoguePlayed && sceneCDialoguePlayed == false){
 			StartCoroutine(playSceneC(2));
-			Debug.Log ("COROUTINE C");
+			doorScript3.doorTriggerActive=true;
 		}
 		
 	}
@@ -163,7 +173,6 @@ public class dialogueEngineCorridor : MonoBehaviour {
 			scriptTrigSceneB.externalCallbackActivate();
 			sceneADialoguePlaying = false;
 			sceneADialoguePlayed = true;
-			Debug.Log("RESET A");
 		}
 		
 		if(conversation == 1){
@@ -171,14 +180,12 @@ public class dialogueEngineCorridor : MonoBehaviour {
 			scriptTrigSceneC.externalCallbackActivate();
 			sceneBDialoguePlaying = false;
 			sceneBDialoguePlayed = true;
-			Debug.Log("RESET B");
 		}
 		
 		if(conversation == 2){
 			scriptTrigSceneC.externalCallbackDeactivate();
 			sceneCDialoguePlaying = false;
 			sceneCDialoguePlayed = true;
-			Debug.Log("RESET C");
 		}
 
 		lineNumber = 0;

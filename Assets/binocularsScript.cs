@@ -3,8 +3,9 @@ using System.Collections;
 
 public class binocularsScript : MonoBehaviour {
 
-	private const int ZOOM_IN_FIELD_OF_VIEW = 15;
-	private const int ZOOM_OUT_FIELD_OF_VIEW = 30;
+	private const float ZOOM_IN_FIELD_OF_VIEW = 15f;
+	private const float ZOOM_OUT_FIELD_OF_VIEW = 30f;
+	private float newFieldOfView;
 
 	
 	public void EnableDisable (bool enable) {
@@ -14,13 +15,16 @@ public class binocularsScript : MonoBehaviour {
 	}
 	
 	public void EnableDisableZoom (bool enable) {
-		int newFieldOfView;
+
 		if (enable == true) {
 			newFieldOfView = ZOOM_IN_FIELD_OF_VIEW;
+
 		}
 		else {
 			newFieldOfView = ZOOM_OUT_FIELD_OF_VIEW;
+
 		}
+
 		Transform parentTransform = gameObject.transform.parent;
 		Transform cameraRightTransform = parentTransform.FindChild("CameraRight");
 		Transform cameraLeftTransform = parentTransform.FindChild("CameraLeft");
@@ -29,5 +33,13 @@ public class binocularsScript : MonoBehaviour {
 		cameraRightCameraComponent.fieldOfView = newFieldOfView;
 		cameraLeftCameraComponent.fieldOfView = newFieldOfView;
 
+
 	}
+
+
+
+	
+	
+
+
 }

@@ -30,7 +30,6 @@ public class dialogueTriggerA : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for DEBTOR AND TRANSPORT
 			externalScriptCorridor.triggerClipRoutine(0);
-			Debug.Log ("TRIGGERED A");
 		}        
 	}
 
@@ -41,8 +40,6 @@ public class dialogueTriggerA : MonoBehaviour {
 	public void externalCallbackDeactivate(){
 		activeTrigger = false;
 	}
-
-
 
 
 }

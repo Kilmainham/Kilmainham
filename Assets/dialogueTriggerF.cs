@@ -19,10 +19,9 @@ public class dialogueTriggerF : MonoBehaviour {
 		isColliding = false;
 		sceneStarted = false;
 		activeTrigger = false;
-
-
+	
 		exitDoorScript = GameObject.Find ("OpenDoorTrigger").GetComponent<OpenDoorScript>();
-		Debug.Log (exitDoorScript);
+
 	}
 	
 	// Update is called once per frame
@@ -38,7 +37,6 @@ public class dialogueTriggerF : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for CHAPEL SCENE PART II
 			externalScriptChapel.triggerClipRoutine(5);
-			Debug.Log ("TRIGGERED F");
 			exitDoorScript.activateDoorTrigger();
 		}        
 	}

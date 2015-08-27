@@ -30,7 +30,6 @@ public class dialogueTriggerB : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for CULLEN, NEARY and MADMAN
 			externalScriptCorridor.triggerClipRoutine(1);
-			Debug.Log ("TRIGGERED B");
 		}        
 	}
 

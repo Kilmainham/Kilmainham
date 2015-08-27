@@ -46,21 +46,27 @@ public class pointerColourChange : MonoBehaviour {
 	
 	
 	public void enter(){
-		rend.material.color = activeColour;
-		gettingBigger = true;
-		gettingSmaller = false;
+		if (rend != null) {
+			rend.material.color = activeColour;
+			gettingBigger = true;
+			gettingSmaller = false;
+		}
 	}
 	
 	public void exit(){
-		rend.material.color = inactiveColour;
-		gettingSmaller = true;
-		gettingBigger = false;
+		if (rend != null) {
+			rend.material.color = inactiveColour;
+			gettingSmaller = true;
+			gettingBigger = false;
+		}
 	}
 	
 	public void enterSpecial(){
-		rend.material.color = specialColour;
-		gettingBigger = true;
-		gettingSmaller = false;
+		if (rend != null) {
+			rend.material.color = specialColour;
+			gettingBigger = true;
+			gettingSmaller = false;
+		}
 	}
 
 }

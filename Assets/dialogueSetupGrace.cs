@@ -14,7 +14,6 @@ public class dialogueSetupGrace : MonoBehaviour {
 			Resources.Load("Sound/Dialogue/grace/graceLine1")   as AudioClip,
 			Resources.Load("Sound/Dialogue/grace/graceLine2")   as AudioClip,
 			Resources.Load("Sound/Dialogue/grace/graceCrying")   as AudioClip
-
 			
 		};
 			

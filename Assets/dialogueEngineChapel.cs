@@ -3,6 +3,15 @@ using System.Collections;
 
 public class dialogueEngineChapel : MonoBehaviour {
 
+	//Setup Ghost Meshes
+	public GameObject graceJosephGhost;
+	public GameObject priestGhost;
+	public GameObject guardGhost;
+
+	public GraceJosephFadeIn graceJosephFadeIn;
+	public PriestFade priestFade;
+	public GuardsFadeIn guardsFadeIn;
+
 	//setup character 11 = GRACE
 	public dialogueSetupGrace characterElevenScript;
 	public GameObject graceObj;
@@ -50,10 +59,6 @@ public class dialogueEngineChapel : MonoBehaviour {
 	public bool sceneFDialoguePlaying;
 	public bool sceneFDialoguePlayed;
 
-
-	
-	
-	
 	// setup dialogue parameters
 	public int lineNumber;
 	public float lineLength;
@@ -63,7 +68,14 @@ public class dialogueEngineChapel : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
-		
+		//Ghost initialisation
+		graceJosephGhost = GameObject.Find ("Grace and Joseph");
+		priestGhost = GameObject.Find ("PriestGhost");
+		guardGhost = GameObject.Find ("GuardGhost");
+		graceJosephFadeIn = graceJosephGhost.GetComponent<GraceJosephFadeIn> ();
+		priestFade = priestGhost.GetComponent<PriestFade> ();
+		guardsFadeIn = guardGhost.GetComponent<GuardsFadeIn> ();
+
 		//initialise scene E
 		trigSceneE = GameObject.Find("Trigger E");
 		scriptTrigSceneE = trigSceneE.GetComponent<dialogueTriggerE>();
@@ -112,17 +124,17 @@ public class dialogueEngineChapel : MonoBehaviour {
 		//Chapel Part 1
 		if (whichRoutine == 4 && sceneEDialoguePlayed == false){
 			StartCoroutine(playSceneE(1));
-			Debug.Log ("COROUTINE E");
+			guardsFadeIn.fadeGhostsIn();
+			graceJosephFadeIn.fadeGraceJosephIn();
+
 		}
 
 		//Chapel Part 2
 		if (whichRoutine == 5 && sceneFDialoguePlayed == false){
 			StartCoroutine(playSceneF(1));
-			Debug.Log ("COROUTINE F");
+			guardsFadeIn.fadeGhostsOut();
+			priestFade.fadePriestIn();
 		}
-
-
-
 		
 	}
 	
@@ -132,15 +144,12 @@ public class dialogueEngineChapel : MonoBehaviour {
 			scriptTrigSceneE.externalCallbackDeactivate();
 			sceneEDialoguePlaying = false;
 			sceneEDialoguePlayed = true;
-			//scriptTrigSceneF.externalCallbackActivate();
-			Debug.Log("RESET E");
 		}
 
 		if(conversation == 5){
 			scriptTrigSceneF.externalCallbackDeactivate();
 			sceneFDialoguePlaying = false;
 			sceneFDialoguePlayed = true;
-			Debug.Log("RESET F");
 		}
 		lineNumber = 0;
 		
@@ -187,13 +196,6 @@ public class dialogueEngineChapel : MonoBehaviour {
 
 		//at this point, the challenge is activated
 		scriptTrigSceneE.externalChallengeActivate();
-
-		//lineLength = getCurrentClipLength(charElevenLines[lineNumber]);
-		//yield return new WaitForSeconds((lineLength + linePause));
-
-		//trigger this from external action maybe
-		//charElevenSource.loop = false;
-		//charElevenSource.Stop();
 
 		resetLogicAfterConversation(4);
 	}

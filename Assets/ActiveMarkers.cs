@@ -5,7 +5,7 @@ public class ActiveMarkers : MonoBehaviour {
 
 	public int currentLevel;
 	public FadeObjectInOut fade;
-	public CapsuleCollider collider;
+	public CapsuleCollider col;
 	//This array should contain the names of all the navigable location levels. A Level is a collection of points which can be accessed at the same time from a given point.
 	//From each point, all points in the level above and bellow are active. All other points are not.
 	private string[] tags = new string[]{"Level0", "Level1", "Level2", "Level3", "Level4", "Level5"};
@@ -25,8 +25,8 @@ public class ActiveMarkers : MonoBehaviour {
 			foreach (GameObject marker in levelMarkers){
 				fade = marker.GetComponentInChildren<FadeObjectInOut>();
 				fade.FadeOut();
-				collider = marker.GetComponentInChildren<CapsuleCollider>();
-				collider.enabled=false;
+				col = marker.GetComponentInChildren<CapsuleCollider>();
+				col.enabled=false;
 			}
 		}
 	}
@@ -40,8 +40,8 @@ public class ActiveMarkers : MonoBehaviour {
 		foreach (GameObject marker in level1){
 			fade = marker.GetComponentInChildren<FadeObjectInOut>();
 			fade.FadeIn();
-			collider = marker.GetComponentInChildren<CapsuleCollider>();
-			collider.enabled=true;
+			col = marker.GetComponentInChildren<CapsuleCollider>();
+			col.enabled=true;
 		}
 
 
@@ -58,8 +58,8 @@ public class ActiveMarkers : MonoBehaviour {
 
 			fade = marker.GetComponentInChildren<FadeObjectInOut>();
 			fade.FadeOut ();
-			collider = marker.GetComponentInChildren<CapsuleCollider>();
-			collider.enabled=false;
+			col = marker.GetComponentInChildren<CapsuleCollider>();
+			col.enabled=false;
 			//Debug.Log ("Current level faded out");
 
 		}
@@ -69,8 +69,8 @@ public class ActiveMarkers : MonoBehaviour {
 			foreach (GameObject marker in previousMarkers){
 				fade = marker.GetComponentInChildren<FadeObjectInOut>();
 				fade.FadeIn();
-				collider = marker.GetComponentInChildren<CapsuleCollider>();
-				collider.enabled=true;
+				col = marker.GetComponentInChildren<CapsuleCollider>();
+				col.enabled=true;
 				//Debug.Log ("Previous level faded in");
 			}
 		
@@ -82,8 +82,8 @@ public class ActiveMarkers : MonoBehaviour {
 			foreach (GameObject marker in nextMarkers ){
 				fade = marker.GetComponentInChildren<FadeObjectInOut>();
 				fade.FadeIn();
-				collider = marker.GetComponentInChildren<CapsuleCollider>();
-				collider.enabled=true;
+				col = marker.GetComponentInChildren<CapsuleCollider>();
+				col.enabled=true;
 				//Debug.Log ("Next level faded in");
 			}
 		}

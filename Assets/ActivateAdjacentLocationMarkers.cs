@@ -12,7 +12,6 @@ public class ActivateAdjacentLocationMarkers : MonoBehaviour {
 		//find all location markers
 		locationMarkers = GameObject.Find ("LocationMarkers");
 		locationPoints=locationMarkers.GetComponentsInChildren<Transform> ();
-		Debug.Log ("length is " + locationPoints.Length);
 		//For each location marker disable the renderer and collider
 		for (int i=0; i<locationPoints.Length; i++) {
 			if (locationPoints[i].gameObject.name!="LocationMarkers"){//Don't add these to the parent
@@ -29,7 +28,6 @@ public class ActivateAdjacentLocationMarkers : MonoBehaviour {
 		fade.FadeIn ();
 		coll = firstMarker.GetComponent<MeshCollider> ();
 		coll.enabled = true;
-
 	}
 
 	public void deactivateMarkers(){
@@ -43,16 +41,15 @@ public class ActivateAdjacentLocationMarkers : MonoBehaviour {
 	}
 
 	public void activateMarkers(int i){
-		Debug.Log (i);
 		GameObject marker = GameObject.FindGameObjectWithTag ("lp" + i);
 
 		amis = marker.GetComponents<AdjacentMarkerIdentifier> ();
 		foreach (AdjacentMarkerIdentifier ami in amis) {
 			GameObject newMarker = GameObject.FindGameObjectWithTag("lp"+ami.markerToActivate);
-			Debug.Log(newMarker);
+
 			fade = newMarker.GetComponent<FadeObjectInOut> ();
 			fade.FadeIn ();
-			Debug.Log(fade);
+
 			coll = newMarker.GetComponent<MeshCollider> ();
 			coll.enabled = true;
 		}

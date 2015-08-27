@@ -30,7 +30,7 @@ public class dialogueTriggerC : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for VAGRANT and THIEF
 			externalScriptCorridor.triggerClipRoutine(2);
-			Debug.Log ("TRIGGERED C");
+
 		}        
 	}
 	

@@ -38,7 +38,6 @@ public class dialogueTriggerE : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for CHAPEL SCENE
 			externalScriptChapel.triggerClipRoutine(4);
-			Debug.Log ("TRIGGERED E");
 		}        
 	}
 	

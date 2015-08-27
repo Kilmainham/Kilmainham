@@ -143,7 +143,7 @@ public class dialogueEngineYard : MonoBehaviour {
 		//Yard
 		if (whichRoutine == 6 && sceneGDialoguePlayed == false){
 			StartCoroutine(playSceneG(14));
-			Debug.Log ("COROUTINE G");
+
 		}
 	}
 	

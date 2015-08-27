@@ -4,7 +4,6 @@ using System.Collections;
 public class rotateLight : MonoBehaviour {
 	GameObject dlight;
 	Transform trans;
-	float ychange=0f;
 	Vector3 rotationAngle = new Vector3(0f,0.1f,0f);
 	// Use this for initialization
 	void Start () {

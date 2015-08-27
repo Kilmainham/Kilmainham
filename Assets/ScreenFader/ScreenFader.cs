@@ -8,6 +8,8 @@ public class ScreenFader : MonoBehaviour {
 	public float alpha = 1.0f;
 	public bool fadingIn = true;
 	public bool fadingOut = false;
+
+	public float speed= 0.5f;
 	//controls for fader colour
 	float r=0f;
 	float g=0f;
@@ -35,7 +37,7 @@ public class ScreenFader : MonoBehaviour {
 	void fadeIn(){
 		
 		faderColor = new Color (r, g, b, alpha);
-		alpha = alpha - 0.01f;
+		alpha = alpha - speed*Time.deltaTime;
 		rend.material.color = faderColor;
 		if (alpha <= 0f) {
 			rend.enabled=false;
@@ -50,7 +52,7 @@ public class ScreenFader : MonoBehaviour {
 		faderColor = new Color (r, g, b, alpha);
 		rend.material.color = faderColor;
 		if (alpha < 1f) {
-			alpha = alpha + 0.01f;
+			alpha = alpha + speed*Time.deltaTime;
 		}
 	}
 	public void startFadeOut(){

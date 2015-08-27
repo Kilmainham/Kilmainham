@@ -22,10 +22,8 @@ public class FootstepScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
-		//Debug.Log(Application.loadedLevelName);
+
 		lvlName = Application.loadedLevelName.Substring(0,6);
-		Debug.Log (lvlName);
 		
 		//load the concrete footstep clips
 		concreteFootsteps =  new AudioClip[]

@@ -8,7 +8,7 @@ public class dialogueSetupYardGuard : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("YARD GUARD START");
+
 		yardGuardAudioSource = gameObject.GetComponent<TBE_3DCore.TBE_Source>();
 		yardGuardDialogueArray =  new AudioClip[]
 		{	
@@ -26,8 +26,6 @@ public class dialogueSetupYardGuard : MonoBehaviour {
 			Resources.Load("Sound/Dialogue/yardGuard/guardYardLine12")   as AudioClip,
 			Resources.Load("Sound/Dialogue/yardGuard/guardYardLine13")   as AudioClip,
 			Resources.Load("Sound/Dialogue/yardGuard/guardYardLine14")   as AudioClip
-
-
 		};
 		
 	}

@@ -31,7 +31,6 @@ public class dialogueTriggerG : MonoBehaviour {
 			sceneStarted = true;
 			//this trigger is for Yard 
 			externalScriptYard.triggerClipRoutine(6);
-			Debug.Log ("TRIGGERED F");
 		}        
 	}
 	
